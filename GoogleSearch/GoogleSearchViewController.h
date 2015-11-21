@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ImageView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActivityIndicator;
 @property (weak, nonatomic) IBOutlet UITextField *SearchTerm;
+@property (weak, nonatomic) IBOutlet UILabel *Title;
+@property (weak, nonatomic) IBOutlet UIButton *SearchButton;
+@property (weak, nonatomic) IBOutlet UIButton *BackButton;
 @property (nonatomic) NSArray *data;
 
 @end

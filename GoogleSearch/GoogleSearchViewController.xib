@@ -7,9 +7,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoogleSearchViewController">
             <connections>
                 <outlet property="ActivityIndicator" destination="eIF-1z-cqv" id="IUx-Nt-TMW"/>
+                <outlet property="BackButton" destination="vGE-Vs-Zj4" id="nis-IW-pUt"/>
                 <outlet property="ImageView" destination="0Mp-Yn-tdE" id="5Ig-Wc-bZv"/>
+                <outlet property="SearchButton" destination="ITY-NY-72x" id="k0e-qg-QtG"/>
                 <outlet property="SearchTerm" destination="meF-ah-fes" id="S6E-34-dow"/>
-                <outlet property="TableView" destination="8PU-WA-vLB" id="qKN-H4-HsH"/>
+                <outlet property="TableView" destination="8PU-WA-vLB" id="ib8-WH-yrz"/>
+                <outlet property="Title" destination="gz4-Gb-AJY" id="nNu-FH-Ylc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="6N0-aW-1fQ"/>
             </connections>
         </placeholder>
@@ -42,6 +45,21 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Mp-Yn-tdE">
                     <rect key="frame" x="38" y="307" width="240" height="128"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGE-Vs-Zj4">
+                    <rect key="frame" x="14" y="8" width="70" height="30"/>
+                    <state key="normal" title="&lt;&lt; Back">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="zJf-cs-8f0"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Image Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz4-Gb-AJY">
+                    <rect key="frame" x="100" y="12" width="117" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

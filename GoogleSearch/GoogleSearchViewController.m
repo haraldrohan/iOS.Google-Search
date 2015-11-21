@@ -10,7 +10,15 @@
 #import "ImageHandler.h"
 #import <GBLoading/GBLoading.h>
 
+typedef enum {
+    UIStateList,
+    UIStateImage,
+    UIStateProgress,
+} UIState;
+
 @interface GoogleSearchViewController ()
+
+@property (assign, nonatomic) UIState                                       uiState;
 
 @end
 
@@ -51,11 +59,42 @@
     return cell;
 }
 
+
+- (void)setUiState:(UIState)uiState {
+    
+    // change the UI based on the given states
+    self.TableView.hidden = (uiState != UIStateList);
+    self.SearchTerm.hidden = (uiState != UIStateList);
+    self.SearchButton.hidden = (uiState != UIStateList);
+    self.ImageView.hidden = (uiState != UIStateImage);
+    self.BackButton.hidden = (uiState != UIStateImage);
+    //self.Title.hidden = (uiState == UIStateProgress);
+    self.ActivityIndicator.hidden = (uiState != UIStateProgress);
+    
+    switch (uiState) {
+        case UIStateList: {
+            self.Title.text = @"Image Search";
+            [self.ActivityIndicator stopAnimating];
+        } break;
+            
+        case UIStateImage: {
+            self.Title.text = @"Image";
+            [self.ActivityIndicator stopAnimating];
+        } break;
+            
+        case UIStateProgress: {
+            self.Title.text = @"Loading";
+            [self.ActivityIndicator startAnimating];
+        } break;
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.data.count > (uint)indexPath.row)
     {
-        [self.ActivityIndicator startAnimating];
+        // set in progress state
+        self.uiState = UIStateProgress;
         
         NSDictionary *result = self.data[(long)indexPath.row];
         
@@ -67,37 +106,24 @@
             UIImage *viennaImage = object;
             self.ImageView.image = viennaImage;
             
-            // change our ui state
-            [self.ActivityIndicator stopAnimating];
+            // set to next state
+            self.uiState = UIStateImage;
         } failure:^(BOOL isCancelled) {
             
-            // change our ui state
-            [self.ActivityIndicator stopAnimating];
+            // reset to previous state
+            self.uiState = UIStateList;
         }];
     }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)search
 {
-    UIAlertView *helloWorldAlert = [[UIAlertView alloc]
-                                    initWithTitle:@"My First App" message:@"Hello, World!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    
-    // Display the Hello World Message
-    [helloWorldAlert show];
-    
-    //NSString *escapedString = @"test";
     NSString *escapedString = self.SearchTerm.text;
     NSString *urlString = [NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/search/images?q=%@&v=1.0&start=%d", escapedString, 1];
+    
+    // set in progress state
+    self.uiState = UIStateProgress;
     
     [ImageHandler getImagesWithUrlString:urlString completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
@@ -115,7 +141,17 @@
                 NSLog(@"Error: %@ (%@)", responseObject[@"responseDetails"], httpResponse);
             }
         }
+        // reset state
+        self.uiState = UIStateList;
     }];
 }
+
+- (IBAction)back
+{
+    // set to previous state
+    self.uiState = UIStateList;
+
+}
+
 
 @end
