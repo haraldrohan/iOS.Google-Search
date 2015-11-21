@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoogleSearchViewController">
             <connections>
+                <outlet property="ActivityIndicator" destination="eIF-1z-cqv" id="IUx-Nt-TMW"/>
+                <outlet property="ImageView" destination="0Mp-Yn-tdE" id="5Ig-Wc-bZv"/>
+                <outlet property="SearchTerm" destination="meF-ah-fes" id="S6E-34-dow"/>
                 <outlet property="TableView" destination="8PU-WA-vLB" id="qKN-H4-HsH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="6N0-aW-1fQ"/>
             </connections>
@@ -16,18 +19,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITY-NY-72x">
-                    <rect key="frame" x="186" y="50" width="46" height="30"/>
-                    <state key="normal" title="Button">
+                    <rect key="frame" x="254" y="57" width="54" height="30"/>
+                    <state key="normal" title="Search">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="showMessage" destination="-1" eventType="touchUpInside" id="a70-af-jd9"/>
+                        <action selector="search" destination="-1" eventType="touchUpInside" id="6Hb-Kr-ZJF"/>
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8PU-WA-vLB">
-                    <rect key="frame" x="145" y="115" width="300" height="300"/>
+                    <rect key="frame" x="8" y="114" width="300" height="300"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter SearchTerm" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="meF-ah-fes">
+                    <rect key="frame" x="14" y="58" width="223" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eIF-1z-cqv">
+                    <rect key="frame" x="238" y="86" width="20" height="20"/>
+                </activityIndicatorView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Mp-Yn-tdE">
+                    <rect key="frame" x="38" y="307" width="240" height="128"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

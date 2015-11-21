@@ -10,8 +10,11 @@
 
 @interface GoogleSearchViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
--(IBAction)showMessage;
+-(IBAction)search;
 @property (weak, nonatomic) IBOutlet UITableView *TableView;
+@property (weak, nonatomic) IBOutlet UIImageView *ImageView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActivityIndicator;
+@property (weak, nonatomic) IBOutlet UITextField *SearchTerm;
 @property (nonatomic) NSArray *data;
 
 @end

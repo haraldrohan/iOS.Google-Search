@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GBLoading.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GBStorage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GoogleSearch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2F51C790435427C5A925DA47AD770BE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>36C7458ACFD2070C86E53E98A58E38E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>46936C689716D3142BCC7002D2CC9284</key>
+		<key>EE93D832833CFC80E820241220CB03BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

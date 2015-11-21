@@ -6,6 +6,7 @@ platform :ios, '8.0'
 target 'GoogleSearch' do
 
 pod "AFNetworking", "~> 2.0"
+pod "GBLoading", "~> 2.4"
 
 end
 

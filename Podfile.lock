@@ -20,11 +20,17 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - GBLoading (2.4.0):
+    - GBStorage (~> 2.1)
+  - GBStorage (2.2.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - GBLoading (~> 2.4)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  GBLoading: 24e6e515defafd93b100ad53e753b9b33c381957
+  GBStorage: 50aeef839abb133b89ff9e63025978d767ad6fd5
 
 COCOAPODS: 0.39.0
