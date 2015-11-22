@@ -12,10 +12,10 @@
                value = "responseData[0] ">
             </PersistentString>
             <PersistentString
-               value = "self.data">
+               value = "values2[0]">
             </PersistentString>
             <PersistentString
-               value = "values2[0]">
+               value = "self.data">
             </PersistentString>
             <PersistentString
                value = "values4">
@@ -34,6 +34,14 @@
             </PersistentString>
             <PersistentString
                value = "values[0,0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SearchViewController search]:SearchViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.SearchTerm">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E21FB8004F8AEFD6C44A8C14 /* libPods-GoogleSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3C02C4C671C3A1ABD7DE9D /* libPods-GoogleSearch.a */; };
-		F256FF5C1BF8C68F00E6C930 /* GoogleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F256FF5A1BF8C68F00E6C930 /* GoogleSearchViewController.m */; };
-		F256FF5D1BF8C68F00E6C930 /* GoogleSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F256FF5B1BF8C68F00E6C930 /* GoogleSearchViewController.xib */; };
 		F2587A081BF92086006D5DED /* ImageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F2587A071BF92086006D5DED /* ImageHandler.m */; };
+		F26DFAF21C024730002FF4A5 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26DFAF11C024730002FF4A5 /* SearchViewController.m */; };
+		F26DFAF51C024B1C002FF4A5 /* ShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26DFAF41C024B1C002FF4A5 /* ShowImageViewController.m */; };
 		F28569831BF8B623003E2E5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F28569821BF8B623003E2E5A /* main.m */; };
 		F28569861BF8B623003E2E5A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F28569851BF8B623003E2E5A /* AppDelegate.m */; };
 		F285698C1BF8B624003E2E5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F285698A1BF8B624003E2E5A /* Main.storyboard */; };
@@ -33,11 +33,12 @@
 		8F6FB1E5D81E9484DCEC572B /* Pods-GoogleSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleSearch/Pods-GoogleSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		C7FA9F064623CA955294BB67 /* Pods-GoogleSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleSearch/Pods-GoogleSearch.release.xcconfig"; sourceTree = "<group>"; };
 		ED3C02C4C671C3A1ABD7DE9D /* libPods-GoogleSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleSearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F256FF591BF8C68F00E6C930 /* GoogleSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleSearchViewController.h; sourceTree = "<group>"; };
-		F256FF5A1BF8C68F00E6C930 /* GoogleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleSearchViewController.m; sourceTree = "<group>"; };
-		F256FF5B1BF8C68F00E6C930 /* GoogleSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoogleSearchViewController.xib; sourceTree = "<group>"; };
 		F2587A061BF92086006D5DED /* ImageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandler.h; sourceTree = "<group>"; };
 		F2587A071BF92086006D5DED /* ImageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHandler.m; sourceTree = "<group>"; };
+		F26DFAF01C024730002FF4A5 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		F26DFAF11C024730002FF4A5 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		F26DFAF31C024B1C002FF4A5 /* ShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowImageViewController.h; sourceTree = "<group>"; };
+		F26DFAF41C024B1C002FF4A5 /* ShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowImageViewController.m; sourceTree = "<group>"; };
 		F285697D1BF8B623003E2E5A /* GoogleSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28569811BF8B623003E2E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F28569821BF8B623003E2E5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,11 +117,12 @@
 				F285698D1BF8B624003E2E5A /* Images.xcassets */,
 				F285698F1BF8B624003E2E5A /* LaunchScreen.xib */,
 				F28569801BF8B623003E2E5A /* Supporting Files */,
-				F256FF591BF8C68F00E6C930 /* GoogleSearchViewController.h */,
-				F256FF5A1BF8C68F00E6C930 /* GoogleSearchViewController.m */,
-				F256FF5B1BF8C68F00E6C930 /* GoogleSearchViewController.xib */,
 				F2587A061BF92086006D5DED /* ImageHandler.h */,
 				F2587A071BF92086006D5DED /* ImageHandler.m */,
+				F26DFAF01C024730002FF4A5 /* SearchViewController.h */,
+				F26DFAF11C024730002FF4A5 /* SearchViewController.m */,
+				F26DFAF31C024B1C002FF4A5 /* ShowImageViewController.h */,
+				F26DFAF41C024B1C002FF4A5 /* ShowImageViewController.m */,
 			);
 			path = GoogleSearch;
 			sourceTree = "<group>";
@@ -235,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F285698C1BF8B624003E2E5A /* Main.storyboard in Resources */,
-				F256FF5D1BF8C68F00E6C930 /* GoogleSearchViewController.xib in Resources */,
 				F28569911BF8B624003E2E5A /* LaunchScreen.xib in Resources */,
 				F285698E1BF8B624003E2E5A /* Images.xcassets in Resources */,
 			);
@@ -303,10 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F256FF5C1BF8C68F00E6C930 /* GoogleSearchViewController.m in Sources */,
 				F28569861BF8B623003E2E5A /* AppDelegate.m in Sources */,
+				F26DFAF21C024730002FF4A5 /* SearchViewController.m in Sources */,
 				F2587A081BF92086006D5DED /* ImageHandler.m in Sources */,
 				F28569831BF8B623003E2E5A /* main.m in Sources */,
+				F26DFAF51C024B1C002FF4A5 /* ShowImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

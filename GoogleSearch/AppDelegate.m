@@ -20,17 +20,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
-    //self.window =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    //self.window.rootViewController=[[GoogleSearchViewController alloc] init];
-    //[self.window makeKeyAndVisible];
-    
-    GoogleSearchViewController *viewController = [[GoogleSearchViewController alloc] initWithNibName:@"GoogleSearchViewController" bundle:nil];
-    self.window.rootViewController = viewController;
-    
-    // With this, the network activity indicator will show and hide automatically as requests start and finish.
-    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    
     return YES;
 }
 
