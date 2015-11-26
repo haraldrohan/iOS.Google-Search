@@ -24,16 +24,5 @@
     [dataTask resume];
 }
 
-/**
- * Downloads and image from the given url and calls the given completion handler
- */
-
-+ (void)getImageWithUrlString:(NSString *)urlString success:(void(^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void(^)(AFHTTPRequestOperation *operation, NSError *error))failure {
-    NSURL *url = [NSURL URLWithString:urlString];
-    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:[[NSURLRequest alloc] initWithURL:url]];
-    requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
-    [requestOperation setCompletionBlockWithSuccess:success failure:failure];
-    [requestOperation start];
-}
 
 @end

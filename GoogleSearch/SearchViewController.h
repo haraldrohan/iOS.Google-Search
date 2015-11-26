@@ -17,5 +17,4 @@
 @property (weak, nonatomic) IBOutlet UIButton *SearchButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActivityIndicator;
 
-
 @end

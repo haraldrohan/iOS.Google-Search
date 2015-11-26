@@ -22,6 +22,7 @@ typedef enum {
 @property (nonatomic) NSArray *data;
 @property (nonatomic) UIImage *image;
 
+
 @end
 
 @implementation SearchViewController
@@ -61,6 +62,14 @@ typedef enum {
     return cell;
 }
 
+- (void)ErrorMessage:(NSString *)message{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:message
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
 
 - (void)setUiState:(UIState)uiState {
     
@@ -108,6 +117,8 @@ typedef enum {
             self.uiState = UIStateList;
         } failure:^(BOOL isCancelled) {
             
+            [self ErrorMessage:@"Downloading Image failed"];
+            
             // reset to previous state
             self.uiState = UIStateList;
         }];
@@ -128,16 +139,19 @@ typedef enum {
 }
 
 
+
+
 - (IBAction)search
 {
     NSString *escapedString = self.SearchTerm.text;
-    NSString *urlString = [NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/search/images?q=%@&v=1.0&start=%d", escapedString, 0];
+    NSString *urlString = [NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/search/images?q=%@&v=1.0&rsz=8&start=%d", escapedString, 0];
 
     // set in progress state
     self.uiState = UIStateProgress;
     
     [ImageHandler getImagesWithUrlString:urlString completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
+            [self ErrorMessage:@"Get Images failed"];
             NSLog(@"Error: %@", error);
             self.data = [[NSMutableArray alloc] init];
         } else {
@@ -149,6 +163,7 @@ typedef enum {
                 [self.TableView reloadData];
             }
             else {
+                [self ErrorMessage:@"Get Images failed"];
                 NSLog(@"Error: %@ (%@)", responseObject[@"responseDetails"], httpResponse);
             }
         }

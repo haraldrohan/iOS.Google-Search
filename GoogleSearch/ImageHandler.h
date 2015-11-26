@@ -12,6 +12,5 @@
 @interface ImageHandler : NSObject
 
 + (void)getImagesWithUrlString:(NSString *)urlString completionHandler:(void(^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler;
-+ (void)getImageWithUrlString:(NSString *)urlString success:(void(^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void(^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end
